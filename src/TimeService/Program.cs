@@ -1,4 +1,4 @@
-﻿using Serilog;
+using Serilog;
 using TimeService.Configuration;
 using Topshelf;
 
@@ -15,6 +15,8 @@ namespace TimeService
 
             HostFactory.Run(x =>
             {
+                x.SelectPlatform();
+
                 x.UseSerilog();
 
                 var commandLineConfiguration = new CommandLineConfiguration();

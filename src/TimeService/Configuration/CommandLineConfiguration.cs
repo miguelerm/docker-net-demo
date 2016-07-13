@@ -1,4 +1,4 @@
-﻿namespace TimeService.Configuration
+namespace TimeService.Configuration
 {
     internal class CommandLineConfiguration : IConfiguration
     {

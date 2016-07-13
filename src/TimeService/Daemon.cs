@@ -1,4 +1,4 @@
-﻿using Microsoft.Owin.Hosting;
+using Microsoft.Owin.Hosting;
 using Serilog;
 using System;
 using TimeService.Configuration;
