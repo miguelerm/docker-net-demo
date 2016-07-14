@@ -9,13 +9,14 @@ namespace TimeService
         private static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Verbose()
+                .MinimumLevel.Debug()
+                .Enrich.FromLogContext()
                 .WriteTo.ColoredConsole()
                 .CreateLogger();
 
             HostFactory.Run(x =>
             {
-                x.SelectPlatform();
+                x.SelectPlatform(); // Required for unix systems
 
                 x.UseSerilog();
 
